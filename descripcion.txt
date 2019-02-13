@@ -1,10 +1,30 @@
+GIT
+
+
 *git init
 *git status
 *git add
 *git commit -m "Mensaje del commit"
 *git log
 *git diff
-
-
+*git push
+git clone https://github.com/jbballesteros/ITM_ABD_201901.git
+git checkout -v cambia la rama
 
 Git Bash
+
+Git gcommit sin git add
+
+
+Las ramas son iguales cuand compartan el ancestro, de resto no ven los archivos
+ 	
+
+SQL HISTORY
+
+DBMS -  Cualuier base de datos, RDBMS Base de datos relacionados
+
+Base de datos
+
+Motor de base de datos
+
+
