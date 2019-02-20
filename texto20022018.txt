@@ -1,0 +1,48 @@
+https://drive.google.com/file/d/1wrdSOvnCwLfOoAJHfenLNx-bmVlj0ync/view
+bit.ly/2T3Dnyd
+
+create table assignments (
+id integer , 
+employee_id integer NOT NULL, project_id integer NOT NULL,  PRIMARY KEY (ID))
+
+
+create table projects (id integer, code varchar2(255) NOT NULL, manager_id integer NOT NULL, budget integer NOT NULL, date_of_beginning date, date_of_ending date, PRIMARY KEY (ID))
+
+
+
+
+create table employees (id integer, manager_id integer, date_of_joining date NOT NULL, name varchar2(255) NOT NULL, last_name varchar2(255) NOT NULL, salary number, PRIMARY KEY (ID))
+
+ALTER TABLE employees 
+ADD CONSTRAINT check_employees_salary  CHECK (salary>=50000 )
+
+
+ALTER TABLE assignments 
+ADD CONSTRAINT fk_employee_id
+FOREIGN KEY (employee_id)
+REFERENCES employees(id)
+
+ALTER TABLE assignments 
+ADD CONSTRAINT fk_project_id
+FOREIGN KEY (project_id)
+REFERENCES projects(id)
+
+
+ALTER TABLE assignments 
+ADD CONSTRAINT fk_project_id
+FOREIGN KEY (project_id)
+REFERENCES projects(id)
+
+
+
+ALTER TABLE projects
+ADD CONSTRAINT fk_manager_project_id
+FOREIGN KEY (manager_id)
+REFERENCES employees(id)
+
+
+
+ALTER TABLE employees
+ADD CONSTRAINT fk_manager_employees_id
+FOREIGN KEY (manager_id)
+REFERENCES employees(id)
